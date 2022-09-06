@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RestAPI</string>
+    <string name="users">Users</string>
+    <string name="photos">Photos</string>
+    <string name="hero_heading">Users Management</string>
+    <string name="default_alphabet">R</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="collection">Collections</string>
+    <string name="posts">Posts</string>
+    <string name="todos">Todos</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+    <string name="share">Share</string>
+</resources>

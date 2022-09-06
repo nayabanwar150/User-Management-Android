@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.UsersFragment"
+        android:padding="16dp">
+
+        <!-- TODO: Update blank fragment layout -->
+        <!--  Hero Section  -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_hero"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp"
+            android:backgroundTint="@color/primary_light_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:textAlignment="center">
+
+                <ImageView
+                    android:id="@+id/ic_alert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_alert" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:text="@string/hero_heading" />
+
+                <ImageView
+                    android:id="@+id/ic_users_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_counts"
+                    android:layout_marginStart="45dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:minLines="1"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:text="10" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--  User Lists  -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_user_lists"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingVertical="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/user_lists_tile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_hero" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
