@@ -10,8 +10,10 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.restapi.R
 import com.example.restapi.activities.UserActivity
+import com.example.restapi.models.user.UsersItem
+import java.io.Serializable
 
-class UsersAdapter(private val context: Context,private val userList: List<String>): RecyclerView.Adapter<UsersAdapter.UsersViewHolder >(){
+class UsersAdapter(private val context: Context,private val userList: List<UsersItem>): RecyclerView.Adapter<UsersAdapter.UsersViewHolder >(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder {
         val views = LayoutInflater.from(parent.context).inflate(R.layout.user_lists_tile, parent, false)
@@ -19,14 +21,14 @@ class UsersAdapter(private val context: Context,private val userList: List<Strin
     }
 
     override fun onBindViewHolder(holder: UsersViewHolder, position: Int) {
-        val userAlphabet = textFromNameGenerator(userList[position])
-        holder.username.text = userList[position]
+        val userAlphabet = textFromNameGenerator(userList[position].name)
+        holder.username.text = userList[position].name
         holder.userAlpha.text = userAlphabet
 
         holder.userCard.setOnClickListener{
             context.startActivity(Intent(context, UserActivity::class.java).apply {
-                putExtra("username", userList[position])
                 putExtra("alphabet", userAlphabet)
+                putExtra("user", userList[position] as Serializable)
             })
         }
     }

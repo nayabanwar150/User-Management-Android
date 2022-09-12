@@ -26,4 +26,10 @@
     <style name="BaseBottomSheetDialogModal" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
     </style>
+
+
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>

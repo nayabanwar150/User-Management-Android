@@ -1,0 +1,6 @@
+ext {
+    //libraries
+    retrofit = '2.9.0'
+    gsonRetrofit = '2.9.0'
+    lifecycle = '2.4.0'
+}

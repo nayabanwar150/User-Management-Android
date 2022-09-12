@@ -2,12 +2,16 @@ package com.example.restapi.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.restapi.R
 import com.example.restapi.databinding.ActivityMainBinding
+import com.example.restapi.viewmodels.UserViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

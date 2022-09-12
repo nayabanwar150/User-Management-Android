@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.restapi.R
+import com.example.restapi.models.comments.CommentItem
+import com.example.restapi.models.comments.Comments
 
-class CommentsAdapter(private  val context: Context, private val cList: List<String>): RecyclerView.Adapter<CommentsAdapter.CommentsViewHolder>() {
+class CommentsAdapter(private  val context: Context, private val cList: Comments): RecyclerView.Adapter<CommentsAdapter.CommentsViewHolder>() {
 
     inner class CommentsViewHolder(viewItem: View): RecyclerView.ViewHolder(viewItem){
         val userName: TextView = viewItem.findViewById(R.id.tv_comment_username)
@@ -20,7 +22,7 @@ class CommentsAdapter(private  val context: Context, private val cList: List<Str
     }
 
     override fun onBindViewHolder(holder: CommentsViewHolder, position: Int) {
-        holder.userName.text = cList[position]
+        holder.userName.text = cList[position].body
     }
 
     override fun getItemCount(): Int {

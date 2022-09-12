@@ -19,7 +19,9 @@
         <entry key="app/src/main/res/layout/comment_bottomsheet.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/comment_item.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/fragment_photos.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_post_item.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/loading_dailog.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/user_lists_tile.xml" value="0.28125" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.2953125" />
       </map>
